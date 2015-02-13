@@ -1,0 +1,7 @@
+﻿Registration_CantRegisterContainer: "Container service is built-in and read-only.",
+Registration_IncompatibleAsType: "Service type {0} does not inherit or implement {1}.",
+ResolutionException_MissingNamedType: "Required dependency of type {0} named '{1}' could not be resolved.",
+ResolutionException_MissingType: "Required dependency of type {0} could not be resolved.",
+ResolutionException_UnknownScope: "Unknown scope.",
+ResolutionException_Autowired: "Error trying to resolve Service '{0}' or one of its autowired dependencies (see inner exception for details).",
+ResolutionException_Adapter: "Error trying to resolve Service '{0}' from Adapter '{1}': {2}"

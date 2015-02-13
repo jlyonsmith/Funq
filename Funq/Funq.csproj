@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84BCCEB8-B54E-421D-BDC3-EB3A692D403F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Funq</RootNamespace>
+    <AssemblyName>Funq</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="BeforeBuild" command="make" workingdir="${ProjectDir}/Resources" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="BeforeBuild" command="make" workingdir="${ProjectDir}/Resources" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Container.Adapter.cs" />
+    <Compile Include="Container.cs" />
+    <Compile Include="Container.Overloads.cs">
+      <DependentUpon>Container.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Func.cs" />
+    <Compile Include="IFluentInterface.cs" />
+    <Compile Include="IFunqlet.cs" />
+    <Compile Include="Owner.cs" />
+    <Compile Include="ResolutionException.cs" />
+    <Compile Include="ReuseScope.cs" />
+    <Compile Include="ServiceEntry.cs" />
+    <Compile Include="ServiceEntry.Generic.cs" />
+    <Compile Include="ServiceKey.cs" />
+    <Compile Include="Syntax.cs" />
+    <Compile Include="IResolver.cs" />
+    <Compile Include="IContainerAdapter.cs" />
+    <Compile Include="Resources\FunqResources.cs" />
+    <Compile Include="ReflectionExtensions.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="Container.xdoc" />
+    <None Include="Funq.csproj" />
+    <None Include="License.txt" />
+    <None Include="Resources\FunqResources.strings" />
+    <None Include="Resources\makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FunqResources.resources">
+      <LogicalName>Funq.FunqResources.resources</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

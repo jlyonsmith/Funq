@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funq", "Funq\Funq.csproj", "{84BCCEB8-B54E-421D-BDC3-EB3A692D403F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funq.UnitTests", "Funq.Test\Funq.UnitTests.csproj", "{942B3404-5CDC-4A2E-8859-49BE8DA1AC0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84BCCEB8-B54E-421D-BDC3-EB3A692D403F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84BCCEB8-B54E-421D-BDC3-EB3A692D403F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84BCCEB8-B54E-421D-BDC3-EB3A692D403F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84BCCEB8-B54E-421D-BDC3-EB3A692D403F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{942B3404-5CDC-4A2E-8859-49BE8DA1AC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{942B3404-5CDC-4A2E-8859-49BE8DA1AC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{942B3404-5CDC-4A2E-8859-49BE8DA1AC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{942B3404-5CDC-4A2E-8859-49BE8DA1AC0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
