@@ -77,6 +77,9 @@ namespace Funq
 
             foreach (var serviceEntry in services.Values)
             {
+                if (serviceEntry.Owner == Owner.External)
+                    continue;
+
                 var disposable = serviceEntry.GetInstance() as IDisposable;
                 if (disposable != null && !(disposable is Container))
                 {
