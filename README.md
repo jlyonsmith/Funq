@@ -8,7 +8,7 @@ This version is:
 - __Up-to-date__.  Bug fixes and working unit tests
 - __Stripped down__.  Just .NET Core and PCL versions
 - __Enhanced__.  Includes ServiceStack enhancements such as auto-wiring.
-- __Documentate__.  A wiki with a Getting Started guide.
+- __Documented__.  A wiki with a Getting Started guide.
 - __Centralized__.  One place for the source, links to the original videos by Daniel Cazzulino and other references.
 
 Enjoy!
