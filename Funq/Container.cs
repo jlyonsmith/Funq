@@ -159,7 +159,7 @@ namespace Funq
 
         private Exception CreateResolveException<TService>(Exception ex)
         {
-            return new Exception(FunqResources.ResolutionException_Autowired(typeof(TService).FullName), ex);
+            return new ResolutionException(FunqResources.ResolutionException_Autowired(typeof(TService).FullName), ex);
         }
 
         private TService ResolveImpl<TService>(string name, bool throwIfMissing)
