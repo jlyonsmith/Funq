@@ -77,6 +77,9 @@ namespace Funq
 
             foreach (var serviceEntry in services.Values)
             {
+                if (serviceEntry.Owner == Owner.External)
+                    continue;
+
                 var disposable = serviceEntry.GetInstance() as IDisposable;
                 if (disposable != null && !(disposable is Container))
                 {
@@ -156,7 +159,7 @@ namespace Funq
 
         private Exception CreateResolveException<TService>(Exception ex)
         {
-            return new Exception(FunqResources.ResolutionException_Autowired(typeof(TService).FullName), ex);
+            return new ResolutionException(FunqResources.ResolutionException_Autowired(typeof(TService).FullName), ex);
         }
 
         private TService ResolveImpl<TService>(string name, bool throwIfMissing)

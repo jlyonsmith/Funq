@@ -24,6 +24,11 @@ namespace Funq
 		public ResolutionException(Type missingServiceType, string missingServiceName)
             : base(FunqResources.ResolutionException_MissingNamedType(missingServiceType.FullName, missingServiceName))
 		{ }
+
+		/// <summary>
+		/// Initializes the exception with an arbitrary message and source exception.
+		/// </summary>
+		public ResolutionException(string message, Exception innerException) : base(message, innerException) { }
 		
 		/// <summary>
 		/// Initializes the exception with an arbitrary message.
